@@ -14,6 +14,7 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { LoginComponent } from './admin/login/login.component';
 import {AuthService} from "./shared/authentication-service";
 import {TokenInterceptorService} from "./shared/token-interceptor.service";
+import {JwtInterceptorService} from "./shared/jwt-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -34,8 +35,14 @@ import {TokenInterceptorService} from "./shared/token-interceptor.service";
         provide: HTTP_INTERCEPTORS,
         useClass: TokenInterceptorService,
         multi: true
-      }
-  ],
+      },
+        {
+        provide: HTTP_INTERCEPTORS,
+        useClass: JwtInterceptorService,
+        multi: true
+    }
+
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
