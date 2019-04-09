@@ -208,7 +208,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \n\t\"email\" : \"test@gmail.com\", \n\t\"password\" : \"secret\"\n}"
+					"raw": "{ \n\t\"email\" : \"test@gmail.com\", \n\t\"password\" : \"\"\n}"
 				},
 				"url": {
 					"raw": "{{host}}api/auth/login",
