@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "b3438082-62c3-4ec3-a06d-1f7f503287fb",
+		"name": "KWM Bookstore Test SS2019",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REST list all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}api/books",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST get book by ISN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}api/book/23523423422",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"book",
+						"23523423422"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST check isbn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}api/checkisbn/23523423422",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"checkisbn",
+						"23523423422"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST search book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}api/books/search/huber",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"books",
+						"search",
+						"huber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST buch speichern",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"isbn\": \"23423423423412\",\n    \"title\": \"Herr der Ringe Teil II\",\n    \"subtitle\": \"Die Rückkehr des Königs\",\n    \"published\": \"2019-03-11 09:00:39\",\n    \"rating\": 10,\n    \"description\": \"Dritter Teil..\",\n    \"user_id\": 1,\n    \"authors\":  [],\n    \"images\": []\n  \n}"
+				},
+				"url": {
+					"raw": "{{host}}api/book",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST buch updaten",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"isbn\":\"4356456463467\",\r\n  \"title\":\"Erstes neues Buch\", \r\n  \"user_id\": 1, \r\n  \"rating\" : 3,\r\n  \"authors\":[{\r\n    \"id\":3,\r\n    \"firstName\":\"Karl\",\r\n    \"lastName\":\"Huber\"\r\n   },\r\n   {\r\n    \"id\":4,\r\n    \"firstName\":\"Johannes\",\r\n    \"lastName\":\"Schönböck\"\r\n   }],\r\n  \"published\":\"2018-01-01T23:00:00.000Z\",\r\n  \"subtitle\":\"Wir lernen dann Angular\",\r\n  \"images\":[{\r\n\"url\":\"https://images-na.ssl-images-amazon.com/images/I/51H--PJcVNL._SX342_BO1,204,203,200_.jpg\",\r\n    \"title\":\"Angular 4\"},\r\n    {\r\n\"url\":\"https://images-na.ssl-images-amazon.com/images/I/514Q%2BCZgjjL._SY400_.jpg\",\r\n    \"title\":\"Angular\"\r\n    }],\r\n  \"description\":\"Lorem ipsum dolor sit amet\"}"
+				},
+				"url": {
+					"raw": "{{host}}api/book",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST buch löschen",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}api/book/23523423422",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"book",
+						"23523423422"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"email\" : \"test@gmail.com\", \n\t\"password\" : \"secret\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}api/auth/login",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYm9va3N0b3JlMTkucHV0ei5rd21oZ2IuYXRcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1NTQ3MDkxNDksImV4cCI6MTU1NDcxMjc0OSwibmJmIjoxNTU0NzA5MTQ5LCJqdGkiOiIzZG55NW5Qa2xJdGRuR2ZqIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIiwidXNlciI6eyJpZCI6MX19.gJ4fioTrlTHI5JF84nUEdvhTo-ZlG0M2_EOx3jCjPiE",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0756f947-8585-47c6-a9cf-f23b0365a8b1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1cb1b716-d64e-4d29-adc6-faea92e78020",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "0e908c2b-70ac-4764-bcc7-992185f78ee3",
+			"key": "host",
+			"value": "https://bookstore19.putz.kwmhgb.at/",
+			"type": "string"
+		}
+	]
+}
